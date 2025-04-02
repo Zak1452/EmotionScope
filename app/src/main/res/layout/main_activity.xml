@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Bouton pour acceder au menu -->
+    <Button
+        android:id="@+id/btn_menu_principal"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_menu_principal"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/btn_menu_principal_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="choix d'analyse"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"></TextView>
+
+
+</LinearLayout>

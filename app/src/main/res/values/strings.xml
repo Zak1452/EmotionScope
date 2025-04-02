@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EmotionScope</string>
+    <string name="take_picture_button_text">Prendre une photo</string>
+    <string name="select_image_button_text">Sélectionner une image</string>
+    <string name="results_text">Résultats :</string>
+    <string name="selected_image_description">Image sélectionnée</string>
+</resources>

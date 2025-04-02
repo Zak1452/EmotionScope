@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="16dp">
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"/>
+
+    <com.example.emotionscope.SuperpositionVisage
+        android:id="@+id/superpositionVisage"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignTop="@id/previewView"
+        android:layout_alignBottom="@id/previewView"
+        android:layout_alignStart="@id/previewView"
+        android:layout_alignEnd="@id/previewView" />
+
+
+<TextView
+    android:id="@+id/textViewResultats"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/previewView"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="80dp"
+    android:text="Résultats: "
+    android:textSize="16sp"
+    android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewEmotionFinale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewResultats"
+        android:text=""
+        android:layout_marginTop="40dp"
+        android:textSize="18sp"/>
+
+<TextView
+    android:id="@+id/textViewDecompte"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/btn_analayse_faciale"
+    android:text="00:00"
+    android:layout_marginLeft="170dp"
+    android:layout_marginTop="-70dp"
+    android:textSize="16sp"
+    android:textStyle="bold"/>
+
+<Button
+    android:id="@+id/btn_analayse_faciale"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/previewView"
+    android:layout_alignParentEnd="true"
+    android:layout_marginTop="30dp"
+    android:layout_marginEnd="135dp"
+    android:layout_marginRight="130dp"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp"
+    android:text="Analyser"
+    android:textStyle="bold" />
+
+<!-- Bouton pour revenir au menu principal -->
+<Button
+    android:id="@+id/btn_menu_principal"
+    android:layout_width="39dp"
+    android:layout_height="37dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="28dp"
+    android:background="@drawable/btn_menu_principal"
+    
+    android:textStyle="bold" />
+    <TextView
+        android:id="@+id/text_retour_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_menu_principal"
+        android:text="Menu principal"
+        android:layout_marginTop="-15dp"
+        android:textColor="@android:color/black"
+        android:textSize="10sp"></TextView>
+
+
+</RelativeLayout>
