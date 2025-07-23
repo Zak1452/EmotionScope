@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="?android:attr/colorBackground"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inscription"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rejoins l'expérience EmotionScope"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/imgPlanetes"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/planetes_gif"
+        android:layout_marginTop="-30dp"/>
+
+    <LinearLayout
+        android:id="@+id/textViewInformationInscription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/colorError"
+        android:gravity="start|center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ivIconeErreur"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/danger" android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/tvMessageErreur"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Message d'erreur"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="6dp">
+
+        <EditText
+            android:id="@+id/saisieNom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nom"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorHint"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp" />
+
+        <EditText
+            android:id="@+id/saisiePrenom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Prénom"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorHint"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/saisieMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Adresse email"
+        android:inputType="textEmailAddress"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorHint"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/saisieMotDePasse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorHint"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp" />
+
+    <EditText
+        android:id="@+id/saisieConfirmerMotDePasse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirmer le mot de passe"
+        android:inputType="textPassword"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textColorHint="?android:attr/textColorHint"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/btnInscriptionFinale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="S'inscrire"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Déjà inscrit ? Connectez-vous ici"
+        android:textColor="?android:attr/textColorLink"
+        android:textStyle="italic"
+        android:gravity="center"
+        android:onClick="retourConnexion"
+        android:clickable="true"
+        android:layout_marginTop="8dp" />
+</LinearLayout>
+</ScrollView>

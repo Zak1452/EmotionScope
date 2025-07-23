@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/texteBienvenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Bienvenue"
+        android:textSize="22sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:id="@+id/gifFusee"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/fusee"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/boutonOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok pour moi"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white" />
+</LinearLayout>

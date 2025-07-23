@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:elevation="8dp">
+
+    <!-- Logo centré -->
+    <ImageView
+        android:id="@+id/logo_analyse_complete"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Logo Analyse Complète"
+        android:src="@drawable/btn_analyse_complete" />
+
+    <!-- Bouton Démarrer -->
+    <Button
+        android:id="@+id/btn_demarrer_analyse_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Démarrer"
+        android:backgroundTint="#8000FF"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>

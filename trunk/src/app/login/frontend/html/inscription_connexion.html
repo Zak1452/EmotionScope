@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/inscription_connexion.css">
+    <script type="module" src="../js/inscription_connexion.js" defer></script>
+    <title>Inscription-Connexion</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Inscription-Connexion">
+
+            <!-- Connexion -->
+            <form action="" class="sign-in-form" id="sign-in-form">
+                <h2 class="title">Connexion</h2>
+                <!-- Email -->
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" id="signin-email">
+                </div>
+                <!-- Mot de Passe -->
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Mot de Passe" id="signin-password">
+                    <i class="far fa-eye toggle-password" data-target="signin-password"></i>
+                </div>                
+                <input type="submit" value="Se connecter" class="btn">
+                <div class="account-text">
+                    <p id="toggle-text">
+                        Vous n'avez pas de compte ? <a href="#" id="sign-up-btn2">S'inscrire</a>
+                    </p>
+                </div>
+            </form>
+
+            <!-- Inscription -->
+            <form action="" class="sign-up-form" id="sign-up-form">
+                <h2 class="title">Inscription</h2>
+                <!-- Nom -->
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Nom" id="lastname">
+                </div>
+                <!-- Prénom -->
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Prénom" id="firstname">
+                </div>
+                <!-- Email -->
+                <div class="input-field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" id="email">
+                </div>
+                <!-- Mot de Passe -->
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Mot de Passe" id="password">
+                    <i class="far fa-eye toggle-password" data-target="password"></i>
+                </div>
+                <!-- Confirmer Mot de Passe -->
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirmer le Mot de Passe" id="confirm-password">
+                    <i class="far fa-eye toggle-password" data-target="confirm-password"></i>
+                </div>
+                <!-- Message d'erreur -->
+                <div id="error-message" class="error-message"></div>
+                <!-- Bouton S'inscrire -->
+                <input type="submit" value="S'inscrire" class="btn" id="btn-inscrire">
+
+                <div class="account-text">
+                    <p id="toggle-text">
+                        Vous avez déjà un compte ? <a href="#" id="sign-in-btn2">Se connecter</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+        <div class="panels-container">
+            <!-- Panel gauche -->
+            <div class="panel left-panel">
+                <div class="content">
+                    <img class = "image_analyse"src="../img/analyse.png" alt="">
+                    <h3>Vous avez déjà un compte?</h3>
+                    <button class="btn" id="sign-in-btn">Se connecter</button>
+                </div>
+            </div>
+            <!-- Panel droite -->
+            <div class="panel right-panel">
+                <div class="content">
+                    <img class = "image_brain"src="../img/brain.png" alt="">
+                    <div class="test">
+                        <h3>Nouvel Utilisateur ?</h3>
+                        <p>Créer un compte pour avoir une meilleure expérience utilisateur</p>
+                        <button class="btn" id="sign-up-btn">S'inscrire</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

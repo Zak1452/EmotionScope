@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/textViewEtatAnalyse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-10dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="État de l'analyse"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:visibility="visible"/>
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/textViewEtatAnalyse"
+        android:layout_marginTop="16dp" />
+
+    <!-- Superposition dessin visage, même taille et position que previewView -->
+    <com.example.emotionscope.SuperpositionVisage
+        android:id="@+id/superpositionVisage"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignTop="@id/previewView"
+        android:layout_alignBottom="@id/previewView"
+        android:layout_alignStart="@id/previewView"
+        android:layout_alignEnd="@id/previewView" />
+
+    <TextView
+        android:id="@+id/textViewDecompte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_analyse_faciale"
+        android:text="00:07"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="-70dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btn_analyse_faciale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/previewView"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginRight="130dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Analyser"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/tableLayoutResultats"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_analyse_faciale"
+        android:layout_marginTop="6dp"
+        android:background="@color/white"
+        android:padding="16dp"
+        android:stretchColumns="1">
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.1"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="Colère"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Dégoût"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="Peur"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.9"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="Joie"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.2"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="Neutre"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="Tristesse"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.6"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="Surprise"
+                android:textSize="9sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <!-- Ligne pour les pourcentages -->
+        <TableRow
+            android:id="@+id/tableRowPourcentages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- Les TextViews pour chaque émotion seront ajoutés dynamiquement ici -->
+        </TableRow>
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_menu_principal"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_menu_principal"
+                android:contentDescription="Menu Principal" />
+
+            <TextView
+                android:id="@+id/text_menu_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Menu principal"
+                android:textSize="14sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/layout_continuer"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_continuer"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/afficher_boite"
+                android:contentDescription="Continuer" />
+
+            <TextView
+                android:id="@+id/text_continuer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Afficher -> Continuer"
+                android:textSize="14sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

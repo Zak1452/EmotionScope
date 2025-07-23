@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+    
+    <!-- Page réalisée par Chaker Zakaria -->
+    <!--Style boite de dialogue: le but est de donner un style efficace afin de donner à notre fichier une allure de boite de dial.-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!--Bouton analyse faciale-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_analyse_faciale"
+                android:layout_width="56dp"
+                android:layout_height="54dp"
+                android:background="@drawable/btn_analyse_faciale" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Analyse Faciale"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Bouton analyse vocale-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_analyse_vocale"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_analyse_vocale" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analyse Vocale"
+                android:textSize="12sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Bouton analyse cognitive-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_analyse_cognitive"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_analyse_cognitive" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Analyse Cognitive"
+                android:textSize="12sp"
+                android:gravity="center" />
+                </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

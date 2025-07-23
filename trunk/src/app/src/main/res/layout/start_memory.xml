@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/memoryLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Image mémoire -->
+    <ImageView
+        android:id="@+id/animationImage"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:src="@drawable/cerveau"
+        android:contentDescription="Image du jeu de mémoire"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Séquence affichée -->
+    <TextView
+        android:id="@+id/tvSequence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Champ de réponse -->
+    <EditText
+        android:id="@+id/etResponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tapez la séquence"
+        android:inputType="number"
+        android:visibility="gone"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Message de retour -->
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cliquez pour démarrer le test de mémoire"
+        android:textSize="18sp"
+        android:textColor="@android:color/holo_purple"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Bouton unique -->
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Commencer" />
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test mémoire terminé"
+        android:background="@drawable/btn_finish"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
+

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    tools:context=".AnalyseVocaleActivity">
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Résultat ici"
+        android:textColor="#333"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:background="#E3F2FD"
+        android:elevation="4dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/recordButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎙️ Commencer l'enregistrement"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⏹️ Arrêter l'enregistrement"
+        android:backgroundTint="#F44336"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/analyzeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🧠 Analyser l'audio"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"/>
+    <Button
+        android:id="@+id/loadFileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charger un fichier audio"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="150dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_menu_principal"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/btn_menu_principal"
+                android:contentDescription="Menu Principal" />
+
+            <TextView
+                android:id="@+id/text_menu_principal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Menu principal"
+                android:textSize="14sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/layout_continuer"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_continuer"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/afficher_boite"
+                android:contentDescription="Continuer" />
+
+            <TextView
+                android:id="@+id/text_continuer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Afficher -> Continuer"
+                android:textSize="14sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+</LinearLayout>

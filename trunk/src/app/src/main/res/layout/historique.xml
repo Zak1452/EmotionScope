@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/plan"
+        android:scaleType="centerCrop"
+        android:alpha="0.2"
+    />
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="#6200EE"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_retour"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@null"
+            android:src="@drawable/btn_left_arrow"
+            android:scaleType="fitCenter"
+            android:layout_marginEnd="8dp"
+            app:tint="@android:color/white"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/titre_historique"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Historique des analyses 🚀"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tabIndicatorColor="#6200EE"
+        app:tabSelectedTextColor="#6200EE"
+        app:tabTextColor="#000000"
+        tools:targetApi="lollipop">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semaine" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jour" />
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_analyses"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tab_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/historique_jours" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "778324586002",
+    "project_id": "emotionscope-477b0",
+    "storage_bucket": "emotionscope-477b0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778324586002:android:171b568bebd69235b172cb",
+        "android_client_info": {
+          "package_name": "com.example.emotionscope"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADFyBXmbHjlxJzVJWNvfv5Lc4avAlVTw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

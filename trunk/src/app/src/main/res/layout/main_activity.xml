@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+        <LinearLayout
+            android:id="@+id/enTete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+            <TextView
+                android:id="@+id/textViewToggleTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="🌃 Changer le thème"
+                android:textColor="@android:color/holo_blue_dark" />
+            <TextView
+                android:id="@+id/textViewBienvenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bienvenue 👋"
+                android:textColor="@color/textPrimary"
+                android:textSize="22sp" />
+            <TextView
+                android:id="@+id/textViewEtatConnexion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Non connecté"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnProfil"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/iconeutilisateur"
+            tools:ignore="TouchTargetSizeCheck" />
+        <RelativeLayout
+            android:id="@+id/sidePanel"
+            android:layout_width="280dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@android:color/white"
+            android:elevation="8dp"
+            android:padding="16dp"
+            android:visibility="gone">
+            <LinearLayout
+                android:id="@+id/sideContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/imageViewImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/cercle_masque"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/planetes" />
+                <TextView
+                    android:id="@+id/textViewNomPrenom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Nom Prénom"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/textViewMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="nomprenom@example.com"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/textViewCGU"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="📄 Consulter les CGU"
+                    android:textColor="@android:color/holo_blue_dark" />
+                <TextView
+                    android:id="@+id/textViewAnalyses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="📊 Mes dernières analyses"
+                    android:textColor="@android:color/holo_blue_dark" />
+                <TextView
+                    android:id="@+id/textViewPlatforme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="🌐 Plateforme en ligne"
+                    android:textColor="@android:color/holo_blue_dark" />
+                <TextView
+                    android:id="@+id/textViewSuppresionCompte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="⚙️ Supprimer le compte"
+                    android:textColor="@android:color/holo_blue_dark" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnDeconnexion"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/holo_red_dark"
+                android:elevation="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="8dp">
+                <ImageView
+                    android:id="@+id/icone_deconnexion"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/deconnexion"
+                    android:tint="@android:color/white"
+                    tools:ignore="UseAppTint" />
+                <TextView
+                    android:id="@+id/textLogout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Se déconnecter"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/puzzleContainer"
+            android:layout_width="1000dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginBottom="10dp"
+            android:clipToPadding="false"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/carreAnalyseComplete"
+                android:layout_width="300dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:visibility="invisible"
+                android:background="@drawable/piece_superieure"
+                android:elevation="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/carreAnalyseFaciale"
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="invisible"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/piece_gauche"
+                    android:elevation="8dp" />
+
+                <FrameLayout
+                    android:id="@+id/carreAnalyseVocale"
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:layout_marginEnd="8dp"
+                    android:visibility="invisible"
+                    android:layout_weight="1"
+                    android:background="@drawable/piece_milieu"
+                    android:elevation="6dp" />
+
+                <FrameLayout
+                    android:id="@+id/carreAnalyseCognitive"
+                    android:layout_width="0dp"
+                    android:layout_height="125dp"
+                    android:visibility="invisible"
+                    android:layout_weight="1"
+                    android:background="@drawable/piece_droite"
+                    android:elevation="4dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonGroupBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/leftButtonGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_choix_analyse"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/btn_menu_principal"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Choix d'Analyse"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/centerButtonGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_analyse_complete"
+                    android:layout_width="65dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/btn_analyse_complete"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Analyse Complète"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/rightButtonGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/btnHistorique"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/historique"
+                    tools:ignore="TouchTargetSizeCheck" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Historique"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

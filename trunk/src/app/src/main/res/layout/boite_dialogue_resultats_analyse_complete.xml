@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titreAnalyseComplete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🌐 Résultats de l'analyse globale 🌐"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"/>
+
+
+
+    <TextView
+        android:id="@+id/titreAnalyseFaciale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="😊 Analyse Faciale"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/resultatsAnalyseFaciale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emotion dominante: 😊 Joie\nRépartition: \n😊 Joie: 70%\n😢 Tristesse: 20%\n..."
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+
+    <TextView
+        android:id="@+id/titreAnalyseVocale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="🎤 Analyse Vocale"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/resultatsAnalyseVocale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tonalité dominante: 😐 Neutre\nRépartition: \n😊 Joie: 50%\n😢 Tristesse: 30%\n..."
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/titreAnalyseCognitive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🧠 Analyse Cognitive"
+        android:textSize="16sp"
+        android:textColor="#FBC02D"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/resultatsAnalyseCognitive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scores:\nMémoire: 85%\nPerception: 78%\nRaisonnement: 92%"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="16dp">
+
+            <ImageButton
+                android:id="@+id/btnEnregistrer"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/save"
+                android:contentDescription="Icône Enregistrer" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enregistrer"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="16dp">
+
+            <ImageButton
+                android:id="@+id/btnTelecharger"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/telecharger"
+                android:contentDescription="Icône Télécharger" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Télécharger"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnFermer"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/fermer"
+                android:contentDescription="Icône Fermer" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fermer"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="/css/emotionscope.css" />
+  <script type="module" src="/js/emotionscope.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <title>Emotionscope</title>
+</head>
+<body>
+
+  <!-- Icône menu burger -->
+  <button id="menu-toggle">☰</button>
+
+  <!-- Menu déroulant -->
+  <aside id="sidebar" class="sidebar">
+    <div class="profile">
+      <h2 id="username"></h2>
+      <p id="email"></p>
+    </div>
+    <button class="btn-logout" id="logout-btn">
+      <img src="/img/deconnexion.png" alt="logout" class="deconnexion">
+      Se déconnecter
+    </button>
+  </aside>
+
+  <div class="container title-bar">
+    <img src="/img/planete.png" alt="planète" class="logo-planete" />
+    <h1>EmotionScope</h1>
+  </div>
+  
+  <hr class="line"/>
+
+  <main class="container">
+    <h1>Historique des Analyses</h1>
+    <div id="analyses-container" class="analyses-container"></div>
+  </main>
+
+  <hr class="line2"/>
+
+</body>
+</html>
