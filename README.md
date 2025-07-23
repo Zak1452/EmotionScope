@@ -21,7 +21,7 @@ EmotionScope est une application mobile permettant de mesurer l’état émotion
 ## Remarques importantes
 
 Les fichiers de modèles machine learning (`.tflite`) ne sont pas inclus dans ce dépôt à cause de leur taille (> 100 Mo).  
-Pour les obtenir, merci de me contacter directement ou utilisez le lien pour télécharger l’APK qui contient les modèles embarqués :
+Pour les obtenir, merci de me contacter directement.
 
 ---
 
